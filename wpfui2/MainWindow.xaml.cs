@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
+using wpfui2.IODirectory.Data.ViewModels;
 
 namespace wpfui2
 {
@@ -23,6 +24,27 @@ namespace wpfui2
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new DirectoryStructureViewModel();
+
         }
+
+      
+
+        #region folder expanded
+        /// <summary>
+        /// WHen folder is expanded, find the sub directories and files in the folder
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Folder_Expanded(object sender, RoutedEventArgs e)
+        {
+
+           
+        }
+
+        #endregion
+
+
+       
     }
 }
